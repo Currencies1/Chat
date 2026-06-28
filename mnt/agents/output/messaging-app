@@ -1,0 +1,47 @@
+
+import os
+
+# المسار الرئيسي للمشروع
+project_path = "/mnt/agents/output/messaging-app"
+
+# إنشاء هيكل المجلدات
+folders = [
+    "frontend/lib/core",
+    "frontend/lib/features/auth/screens",
+    "frontend/lib/features/auth/widgets",
+    "frontend/lib/features/chat/screens",
+    "frontend/lib/features/chat/widgets",
+    "frontend/lib/features/chat/bloc",
+    "frontend/lib/features/calls/screens",
+    "frontend/lib/features/status/screens",
+    "frontend/lib/features/groups/screens",
+    "frontend/lib/shared/widgets",
+    "frontend/lib/shared/utils",
+    "frontend/lib/services",
+    "frontend/lib/models",
+    "frontend/assets/images",
+    "frontend/assets/fonts",
+    
+    "backend/src/config",
+    "backend/src/models",
+    "backend/src/controllers",
+    "backend/src/routes",
+    "backend/src/services",
+    "backend/src/middleware",
+    "backend/src/sockets",
+    "backend/src/utils",
+    "backend/src/encryption",
+    "backend/tests",
+    
+    "shared/types",
+    "shared/constants",
+    
+    "docs",
+    "docker"
+]
+
+for folder in folders:
+    os.makedirs(os.path.join(project_path, folder), exist_ok=True)
+
+print("✅ تم إنشاء هيكل المجلدات بنجاح!")
+print(f"📁 المسار: {project_path}")
